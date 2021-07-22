@@ -32,7 +32,7 @@ namespace Karateka.Api
         {
             services.AddHostedService<StartupHostedService>();
             services.AddSingleton<StartupHostedServiceHealthCheck>();
-
+            services.AddApplicationInsightsTelemetry();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
